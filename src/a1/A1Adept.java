@@ -81,8 +81,8 @@ public class A1Adept {
 		
 		
 
-		System.out.println("Biggest: " + customers[indexBiggest] + " (" + total[indexBiggest] + ")");
-		System.out.println("Smallest: " + customers[indexSmallest] + " (" + total[indexSmallest] + ")");
+		System.out.println("Biggest: " + customers[indexBiggest] + " (" + String.format("%.2f",total[indexBiggest]) + ")");
+		System.out.println("Smallest: " + customers[indexSmallest] + " (" + String.format("%.2f",total[indexSmallest]) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
 		
 		
