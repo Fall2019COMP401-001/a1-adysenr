@@ -10,5 +10,13 @@ public class A1Novice {
 
 		// Your code follows here.
 		
+		int count = scan.nextInt();
+		
+		
+		
+		for (int i=1; i<=count; i++) {
+			
+		}
+		
 	}
 }
