@@ -35,7 +35,7 @@ public class A1Jedi {
 			
 			
 			for(int j=0; j < customerItems; j++) {
-				
+
 				int quantity = scan.nextInt();
 				String item = scan.next();
 				
@@ -48,7 +48,7 @@ public class A1Jedi {
 								customersPurchased[k] = 1;
 							}
 					}
-					boughtStock[k] = customerItems + boughtStock[k];
+					boughtStock[k] = quantity + boughtStock[k];
 					}
 				}
 				
