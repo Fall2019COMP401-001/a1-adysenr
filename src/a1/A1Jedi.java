@@ -14,37 +14,41 @@ public class A1Jedi {
 		
 		String[] stockItems = new String[stockNumber];
 		
+		
+		
+		int[] boughtStock = new int[stockNumber];
+		int[] customersPurchased = new int[stockNumber];
+		
+		
 		for (int i=0; i < stockNumber; i++) {
 			stockItems[i] = scan.next();
 			scan.nextDouble();	
 		}
 		
-		int[] boughtStock = new int[stockNumber];
-		int[] customersPurchased = new int[stockNumber];
-		
 		int totalCustomers = scan.nextInt();
-		String[] customerName = new String[totalCustomers];
 		
 		for(int i=0; i < totalCustomers; i++) {
-			customerName[i] = scan.next();
+			scan.next();
 			scan.next();
 			
 			int customerItems = scan.nextInt();
 			
-			for(i=0; i < customerItems; i++) {
-				int quantityItem = 0;
+			
+			for(int j=0; j < customerItems; j++) {
+				
 				int quantity = scan.nextInt();
 				String item = scan.next();
 				
-				for(i=0; i < stockItems.length; i++) {
+				for(int k=0; k < stockItems.length; k++) {
 					
-					if(stockItems[i].equals(item)) {
-						boughtStock[i] = boughtStock[i] + quantityItem;
-						customersPurchased[i]++;
-						if(customersPurchased[i] == 3) {
-							customersPurchased[i] = 1;
-						}
-								
+					if(stockItems[k].equals(item)) {
+						if(customersPurchased[k] <= i) {
+							customersPurchased[k] = customersPurchased[k] + 1;
+							if(customersPurchased[k] == 3) {
+								customersPurchased[k] = 1;
+							}
+					}
+					boughtStock[k] = customerItems + boughtStock[k];
 					}
 				}
 				
